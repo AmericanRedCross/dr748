@@ -716,6 +716,18 @@ label+.radio {
   padding-top: 10px;
 }
 
+.guidance {
+  text-align: center;
+}
+
+.damage_guidance img {
+  width: 275px;
+}
+
+.damage_guidance h3 {
+  text-align: center;
+}
+
 /* Generated using http://zerosprites.com/ */
 .sprites { background: url(images/sprites.png) no-repeat; }
 .FB-f-Logo__blue_29 { width: 29px; height: 29px; background-position: -66px 0; }
