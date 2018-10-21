@@ -17,9 +17,9 @@
         "thumbnailLimit": "10",
 
         "showGuest": "true",
-        "facebookAppId": "",
-        "googleplusClientId": "",
-        "showTwitter": "false",
+        "facebookAppId": "2065937150402544",
+        "googleplusClientId": "589334901501-hd7jtob2agdqavh98k421taqt2k9nmk4.apps.googleusercontent.com",
+        "showTwitter": "true",
 
         "googleplusLogoutUrl": "https://accounts.google.com/logout",
         "twitterSigninUrl": "https://utility.arcgis.com/tproxy/signin",
