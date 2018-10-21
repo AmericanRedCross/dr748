@@ -30,23 +30,23 @@ body {
     margin-right: 4px;
     font-size: 12px;
     font-weight: bold;
-    color: #007ac2;
+    color: #ED1B2E;
     background-color: #fff;
-    border: 1px solid #007ac2;
+    border: 1px solid #ED1B2E;
     border-radius: 0px;
     max-width: 100%;
     white-space: normal;
 }
 
 .btn:hover, .btn:focus {
-    color: #007ac2;
+    color: #ED1B2E;
     background-color: #e2f1fb;
 }
 
 .btn.active {
     color: #fff;
-    background-color: #007ac2;
-    border: 1px solid #007ac2;
+    background-color: #ED1B2E;
+    border: 1px solid #ED1B2E;
     box-shadow: none;
     cursor: default;
 }
@@ -69,18 +69,18 @@ body {
 .dropdown-group {
     font-size: 12px;
     font-weight: bold;
-    color: #007ac2;
+    color: #ED1B2E;
     background-color: #fff;
-    border: 1px solid #007ac2;
+    border: 1px solid #ED1B2E;
     white-space: normal;
     min-height: 2.6em;
 }
 .number-input {
     font-size: 12px;
     font-weight: bold;
-    color: #007ac2;
+    color: #ED1B2E;
     background-color: #fff;
-    border: 1px solid #007ac2;
+    border: 1px solid #ED1B2E;
     white-space: normal;
     min-height: 2.6em;
     padding-left: 4px;
@@ -89,9 +89,9 @@ body {
 .text-input {
     font-size: 12px;
     font-weight: bold;
-    color: #007ac2;
+    color: #ED1B2E;
     background-color: #fff;
-    border: 1px solid #007ac2;
+    border: 1px solid #ED1B2E;
     white-space: normal;
     min-height: 2.6em;
     padding-left: 4px;
@@ -193,6 +193,7 @@ header, section, footer, aside, nav, main, article, figure {
     height: 28px;
     font-size: 24px;
     z-index: 1000;
+    color: yellow;
 }
 
 /* ---------- splash ---------- */
@@ -325,7 +326,7 @@ header, section, footer, aside, nav, main, article, figure {
     opacity: 0.7;
 }
 .carousel-indicators .active {
-    border: medium solid #007ac2;
+    border: medium solid #ED1B2E;
     margin: 1px;
     opacity: 1.0;
 }
@@ -352,7 +353,7 @@ header, section, footer, aside, nav, main, article, figure {
     background-color: #f8f8f8;
 }
 .flag-error {
-    border-left-color: #007ac2!important;
+    border-left-color: #ED1B2E!important;
     background-color: #e2f1fb;
 }
 .carousel-control .glyphicon-chevron-left, .carousel-control .glyphicon-chevron-right {
@@ -399,7 +400,7 @@ header, section, footer, aside, nav, main, article, figure {
         border-radius: 10px;
     }
     .carousel-indicators .active {
-        background-color: #007ac2!important;
+        background-color: #ED1B2E!important;
         border-width: thin;
         border-radius: 10px;
     }
@@ -524,7 +525,7 @@ header, section, footer, aside, nav, main, article, figure {
 .lg-a {
     font-family: Arial;
     font-size: 16px;
-    color: #007ac2;
+    color: #ED1B2E;
     cursor: pointer;
     padding: 4px;
 }
@@ -542,16 +543,16 @@ header, section, footer, aside, nav, main, article, figure {
 }
 .dropdown-menu {
     background-color: #fff;
-    border: 1px solid #007ac2;
+    border: 1px solid #ED1B2E;
     border-radius: 0px;
 }
 .dropdown-menu>li {
-    color: #007ac2;
+    color: #ED1B2E;
     padding: 3px 20px;
     clear: both;
 }
 .dropdown-menu>li:hover {
-    color: #007ac2;
+    color: #ED1B2E;
     background-color: #e2f1fb;
     cursor: pointer;
 }
@@ -559,13 +560,13 @@ header, section, footer, aside, nav, main, article, figure {
     outline: none;
 }
 .skip-button:focus {
-    color: #007ac2;
+    color: #ED1B2E;
     border: none;
 }
 .submit-button {
     font-size: 14px;
     color: #fff;
-    background-color: #007ac2;
+    background-color: #ED1B2E;
 }
 .submit-button:focus {
     color: #fff;
@@ -688,7 +689,7 @@ label+.radio {
 }
 .profileRankBarFill {
     height: 14px;
-    background-color: #007ac2;
+    background-color: #ED1B2E;
     position: absolute;
 }
 .profileRankToGo {
@@ -710,6 +711,22 @@ label+.radio {
 }
 .empty-star { display: inline-block }
 .filled-star { display: inline-block }
+
+.rclogo {
+  padding-top: 10px;
+}
+
+.guidance {
+  text-align: center;
+}
+
+.damage_guidance img {
+  width: 275px;
+}
+
+.damage_guidance h3 {
+  text-align: center;
+}
 
 /* Generated using http://zerosprites.com/ */
 .sprites { background: url(images/sprites.png) no-repeat; }

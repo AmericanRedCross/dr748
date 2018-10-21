@@ -1,28 +1,25 @@
-﻿{
+{
     "source": "dbd49c155bf249f79bf1e518d56dbbb2",
     "folderId": "052b07ec56b3462c943adcc6959354ec",
     "values": {
-        "webmap": "3a1d33996b0c480b9e34b3221a80ebeb",
+        "webmap": "3228767507584995be23bde0c76dde18",
         "splashBackgroundUrl": "images/splash.jpg",
         "useWebmapOrigImg": true,
-        "includeOverviewMap": false,
-        "overviewMapInitiallyOpen": false,
-        "overviewMapBasemap": "Streets",
+        "includeOverviewMap": true,
+		    "showSkip": true,
+        "overviewMapInitiallyOpen": true,
+        "overviewMapBasemap": "Imagery",
         "overviewMapZoom": 16,
-        "showSkip": true,
-        "skipButtonText": "Skip",
-
         "proxyProgram": "proxy/proxy.ashx",
 
-        "randomizeSelection": true,
+        "randomizeSelection": false,
         "allowGuestSubmissions": true,
         "thumbnailLimit": "10",
 
         "showGuest": "true",
-        "facebookAppId": "",
-        "googleplusClientId": "",
-        "showTwitter": "false",
-
+        "facebookAppId": "2065937150402544",
+        "googleplusClientId": "589334901501-hd7jtob2agdqavh98k421taqt2k9nmk4.apps.googleusercontent.com",
+        "showTwitter": "true",
 
         "googleplusLogoutUrl": "https://accounts.google.com/logout",
         "twitterSigninUrl": "https://utility.arcgis.com/tproxy/signin",
