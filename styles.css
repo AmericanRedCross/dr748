@@ -193,6 +193,7 @@ header, section, footer, aside, nav, main, article, figure {
     height: 28px;
     font-size: 24px;
     z-index: 1000;
+    color: yellow;
 }
 
 /* ---------- splash ---------- */
@@ -710,6 +711,10 @@ label+.radio {
 }
 .empty-star { display: inline-block }
 .filled-star { display: inline-block }
+
+.rclogo {
+  padding-top: 10px;
+}
 
 /* Generated using http://zerosprites.com/ */
 .sprites { background: url(images/sprites.png) no-repeat; }
