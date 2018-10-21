@@ -716,6 +716,10 @@ label+.radio {
   padding-top: 10px;
 }
 
+.rclogo_front {
+  padding: 20px;
+}
+
 .guidance {
   text-align: center;
 }
