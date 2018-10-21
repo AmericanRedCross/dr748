@@ -8,7 +8,7 @@
         "includeOverviewMap": true,
 		    "showSkip": true,
         "overviewMapInitiallyOpen": true,
-        "overviewMapBasemap": "Streets",
+        "overviewMapBasemap": "Imagery",
         "overviewMapZoom": 16,
         "proxyProgram": "proxy/proxy.ashx",
 
