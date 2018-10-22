@@ -53,6 +53,7 @@ body {
 .btn.active.focus, .btn.active:focus, .btn.focus, .btn.focus:active, .btn:active:focus, .btn:focus, input[type="radio"]:focus {
     outline: none;
 }
+
 .checkbox, .radio {
     margin-top: 0px;
 }
@@ -730,6 +731,13 @@ label+.radio {
 
 .damage_guidance h3 {
   text-align: center;
+}
+
+.helpdocument {
+  font-size: 18px;
+  font-weight: bold;
+  font-color: darkgrey;
+  /* text-decoration: underline; */
 }
 
 /* Generated using http://zerosprites.com/ */
