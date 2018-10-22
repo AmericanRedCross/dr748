@@ -20,6 +20,22 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="fragment" content="!">
+
+    <!-- Meta Tags -->
+    <!-- COMMON TAGS -->
+    <meta charset="utf-8">
+    <!-- Search Engine -->
+    <meta name="description" content="Hurricane Michael Remote Damage Assessment ">
+    <meta name="image" content="https://c2.staticflickr.com/8/7393/14074842425_9d11988c78_b.jpg">
+    <!-- Schema.org for Google -->
+    <meta itemprop="name" content="Hurricane Michael Remote Damage Assessment ">
+    <meta itemprop="description" content="Hurricane Michael Remote Damage Assessment ">
+    <meta itemprop="image" content="https://c2.staticflickr.com/8/7393/14074842425_9d11988c78_b.jpg">
+    <!-- Open Graph general (Facebook, Pinterest & Google+) -->
+    <meta name="og:title" content="Hurricane Michael Remote Damage Assessment ">
+    <meta name="og:description" content="Hurricane Michael Remote Damage Assessment ">
+    <meta name="og:type" content="website">
+
     <title>Hurricane Michael Damage Assessment</title>
 
     <link href="js/lib/leaflet.css" rel="stylesheet" />
@@ -96,6 +112,7 @@
                 </div>
 
                 <img class="rclogo center-block" src="images/arc_logo.png" alt="red cross logo" />
+                <!-- <span data-toggle="modal" data-target="#additionalInfoPanel" class="helpdocument">Help Document</span> -->
                 <div id="page-title" class="page-title"></div>
 
                 <h2 class="screenreaderInfo">Survey</h2>
@@ -103,6 +120,7 @@
                 <article id="survey" role="form">
                     <div id="surveyContainer" class="form-frame"></div>
                     <div class="action-bar">
+                      <button id="helpBtn" type="button" class="btn" data-toggle="modal" data-target="#additionalInfoPanel">Help</button>
                       <button id="skipBtn" type="button" class="btn skip-button">Skip</button>
                       <button id="submitBtn" type="submit" class="btn pull-right submit-button">Submit survey</button>
                     </div>
@@ -156,7 +174,7 @@
                 <table class="damage_guidance">
                   <tr>
                     <td><h3>Inhabitable</h3></td>
-                    <td><h3>Habitable</h3></td>
+                    <td><h3>Damaged but Habitable</h3></td>
                   </tr>
                   <tr>
                     <td><img src="images/damage/damage_1.jpeg" /></td>

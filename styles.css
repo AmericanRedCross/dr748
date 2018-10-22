@@ -53,6 +53,7 @@ body {
 .btn.active.focus, .btn.active:focus, .btn.focus, .btn.focus:active, .btn:active:focus, .btn:focus, input[type="radio"]:focus {
     outline: none;
 }
+
 .checkbox, .radio {
     margin-top: 0px;
 }
@@ -191,7 +192,7 @@ header, section, footer, aside, nav, main, article, figure {
     top: 82px;
     width: 14px;
     height: 28px;
-    font-size: 24px;
+    font-size: 36px;
     z-index: 1000;
     color: yellow;
 }
@@ -411,6 +412,7 @@ header, section, footer, aside, nav, main, article, figure {
     height: 64px;
     z-index: 20;
     cursor: pointer;
+    visibility: hidden;
 }
 .heartsLightening {
     filter: alpha(opacity=50);
@@ -730,6 +732,13 @@ label+.radio {
 
 .damage_guidance h3 {
   text-align: center;
+}
+
+.helpdocument {
+  font-size: 18px;
+  font-weight: bold;
+  font-color: darkgrey;
+  /* text-decoration: underline; */
 }
 
 /* Generated using http://zerosprites.com/ */
