@@ -12,9 +12,9 @@
         "overviewMapZoom": 16,
         "proxyProgram": "proxy/proxy.ashx",
 
-        "randomizeSelection": true,
+        "randomizeSelection": false,
         "allowGuestSubmissions": true,
-        "thumbnailLimit": "10",
+        "thumbnailLimit": "1",
 
         "showGuest": "true",
         "facebookAppId": "2065937150402544",
