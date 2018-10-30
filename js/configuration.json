@@ -12,7 +12,7 @@
         "overviewMapZoom": 16,
         "proxyProgram": "proxy/proxy.ashx",
 
-        "randomizeSelection": false,
+        "randomizeSelection": true,
         "allowGuestSubmissions": true,
         "thumbnailLimit": "10",
 
