@@ -503,7 +503,9 @@ define(['lib/i18n.min!nls/resources.js', 'prepareAppConfigInfo', 'handleUserSign
         $("#surveyContainer").fadeTo(100, 0.0);
 
         // Get candidate property
-        dataAccess.getCandidate(prepareAppConfigInfo.appParams.randomizeSelection).then(function (candidate) {
+        dataAccess.getCandidate(
+            prepareAppConfigInfo.appParams.randomizeSelection, 
+            prepareAppConfigInfo.appParams.queryAllFeaturesMaxAgeInMilliseconds).then(function (candidate) {
             // obj:feature{}
             // attachments:[{id,url},...]
 

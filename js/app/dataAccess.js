@@ -154,28 +154,59 @@ define(['diag'], function (diag) {
          * @param {boolean} [randomizeSelection] Indicates if a feature should be selected randomly from the list of available
          * features;  if omitted or false, the first available feature in the list of object ids returned by the feature
          * service is used
+         * @param {boolean|number} [queryAllFeaturesMaxAgeInMilliseconds] The number of milliseconds to cache the list of all
+         * objectIds. This is to save time because on large datasets where many of the features do not have attachments,
+         * this query may happen multiple times each time a new location is loaded, slowing down the application. This
+         * variable is set in configuration.json and should generally be set to {boolean} false unless you are having 
+         * loading issues when switching between images.
          * @return {object} Deferred indicating when candidate is ready; successful resolution includes object with
          * obj and attachments properties; 'obj' contains an attributes property with the candidate's attributes and
          * attachments contains an array containing objects each of which describes an attachment using id and url properties;
          * if there are no more candidates, deferred resolves successfully but with 'obj'=null and 'attachments'=[]; if
          * the fetch fails, the deferred resolves with a failure
          */
-        getCandidate: function (randomizeSelection) {
+        getCandidate: function (randomizeSelection, queryAllFeaturesMaxAgeInMilliseconds) {
             var deferred, url;
             deferred = $.Deferred();
 
-            // Get the ids of available unsurveyed candidates
-            url = dataAccess.featureServiceUrl + "query?where=" + dataAccess.validCandidateCondition
-                    + "&objectIds=&returnIdsOnly=true&returnCountOnly=false&outFields=" + dataAccess.fixedQueryParams
-                    + "&callback=?";
-            $.post(url, function handleCandidatesClosure(results) {
-                dataAccess.handleCandidates(results, randomizeSelection, deferred);
-            },'json');
+            
+            if(queryAllFeaturesMaxAgeInMilliseconds !== false && queryAllFeaturesMaxAgeInMilliseconds > 0 && this.objectIds && !dataAccess.objectIdsExpired(queryAllFeaturesMaxAgeInMilliseconds)) {
+                // we have already gotten the huge list of objectIds this session, do not query it again to save time:
+                diag.appendWithLF('Saving time by re-using list of objectids.');
+                dataAccess.handleCandidates({
+                    objectIds: this.objectIds
+                }, randomizeSelection, false, deferred);
+            } else {
+                // Get the ids of available unsurveyed candidates
+                url = dataAccess.featureServiceUrl + "query?where=" + dataAccess.validCandidateCondition
+                        + "&objectIds=&returnIdsOnly=true&returnCountOnly=false&outFields=" + dataAccess.fixedQueryParams
+                        + "&callback=?";
+                $.post(url, function handleCandidatesClosure(results) {
+                    dataAccess.handleCandidates(results, randomizeSelection, true, deferred);
+                },'json');
+            }
 
             return deferred;
         },
 
-        handleCandidates: function (results, randomizeSelection, deferred) {
+        /**
+         * Compare "this.objectIdsCreateAt" and "now" 
+         * and return true if the age is OLDER than the input maxAgeInMilliseconds
+         * @param {number} maxAgeInMilliseconds 
+         */
+        objectIdsExpired: function(maxAgeInMilliseconds) {
+            if(this.objectIdsCreatedAt) {
+                var currentTime = (new Date).getTime();
+                var age = currentTime - this.objectIdsCreatedAt;
+                return age > maxAgeInMilliseconds;
+            } else {
+                // we should not be here if we do not have this.objectIdsCreatedAt,
+                // but in that case we'll just say it's expired.
+                return true;
+            }
+        },
+
+        handleCandidates: function (results, randomizeSelection, refreshGlobalObjectIds, deferred) {
             var objectId;
 
             if (!results || results.error) {
@@ -185,6 +216,13 @@ define(['diag'], function (diag) {
                     attachments: []
                 });
                 return;
+            }
+
+            // if refreshGlobalObjectIds is true, we want to save them to the global
+            // variable so we can re-use these next time:
+            if(refreshGlobalObjectIds === true) {
+                this.objectIds = results.objectIds;
+                this.objectIdsCreatedAt = (new Date).getTime();
             }
 
             // Pick a candidate from amongst the available
